@@ -1,0 +1,147 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	height: 160px;
+	background-color: #FFE53C ;
+}
+label{
+	font-size: 40px;
+	margin-left: 50px;
+	margin-bottom: 40px;
+}
+html{
+	background-color: white;
+	background-image: url(D:/Max/Web/Rummikub/Rummikub/img/Backgroundimg.jpeg);
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+input{
+	font-size: 25px;
+	padding: 0 0 0 0;
+	margin-left: 100px;
+	margin-bottom: 40px;
+}
+
+
+.logo a{
+	font-size: 2.0em;
+	color: #FF0509;
+	text-decoration: none;
+}
+.logo{
+	width: 400px;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.joker{
+	margin-top:-80px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 550px;
+}
+.joker_black{
+	margin-left: 330px;
+}
+
+.btn{
+	width: 420px;
+	height: 160px;
+	background-color: #2D6827;
+	font: normal 470% 'Bradley Hand', cursive;
+	color:#ACACAC;
+}
+
+.btn:hover{	
+ 	background-color:#33742C;
+ 	box-shadow: 10px 10px 7px #1B3E17;
+}
+
+
+.play{
+	width: 500px;
+	text-align: center;
+	margin-top: 40px;
+	margin: 50px auto;
+}
+.other{
+	width: 1000px;
+	margin: 50px auto;
+}
+.other_btn{
+	margin-left: 50px;
+}
+
+
+
+
+
+.rules_text{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 600px;
+}
+.rules_text h2{
+	color: red;
+}
+.rules_text p{
+	font: normal 1.2em 'Bradley Hand', cursive;
+}
+.back{
+	font-size: 1.5em;
+	position: absolute;
+	margin-top: 0px;
+	padding-left: 20px;
+	color: #0C81F5;
+	text-decoration: none;
+}
+.back:hover{
+	color: #0974DE;
+}
+
+
+.players_names{
+	width: 800px;
+	margin: 0 auto;
+	background-color: #EFD867;
+}
+.header{
+	margin: 0 auto;
+	width: 40%;
+
+}
+.players_names h1{
+	font-size: 500%;
+	font-family: "Times New Roman", Times, serif;
+}
+.number_of_players {
+	font-size: 20px;
+	font-weight: bolder;
+	padding: 10px 25px 10px 25px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	color: #BBBBBB;
+	background-color: #602CEF;
+	border: solid 2px #4410D3;
+	box-shadow: 5px 10px 10px black;
+	
+}
+.number_of_players:hover{
+	background-color: #8159EF;
+	border: solid 2px #794EEF;
+	box-shadow: 5px 10px 8px black;
+	color: #E1E1E1;
+
+}
+
+
+
+
+
+
+
