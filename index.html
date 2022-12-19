@@ -1,154 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 	<meta charset="UTF-8">
-	<title>Rummikub</title>
-	<meta name="describtion" content="Rummikub ist ein Brettpiel.">
-	<meta name="keywords" content="Rummikub,Spiel,score,Rummikub score, Brettpiel">
-	<meta charset="viewport" content="width=1170">
-	<link rel="stylesheet" href="style.css">
-	<script src ="js/jquery-3.6.0.min.js"></script>
-	<script src ="js/script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arminia Bier bestellt</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<main>
-		<header>
-					<h1 class ="logo"><a href = "Rumikub">Rummikub</a></h1>
-					<div class="joker">
-						<img class = "joker_red" src="img/joker_red.jpg" width ="70px">
-						<img class = "joker_black" src="img/Joker_black.jpg" width ="70px">
-					</div>
-		</header>
+	<header>
+		<img id = "header" src="img/header.png" alt="">
+	</header>
+	<div>
+		<button id = "button">
+			<span>A</span>
+			n
+			<span>m</span>
+			e
+			<span>l</span>
+			<img id = "ball" src="img/ball.png" alt="">
+			I
+			<span>e</span>
+			n
+			</button>
+	</div>
+	<footer>
 		
-		<div id="menuId" class="menu" style="display: block">
-			<div class="other">
-				<button id="rules" class="btn other_btn" onclick="showHide('rules_id','menuId'); rules(); backButton('back_id')">Spielregeln</button>
-				<button id="tabelle"class="btn other_btn">Tabelle</button>
-			</div>
-			<div class="play">
-				<button onclick="showHide('new_playId', 'menuId'); newPlay()" id="play"class="btn play_btn">Neus Spiel</button>
-			</div>
-		</div>
-
-		<div id="rules_id" style="display: none">
-			<a href = "" id="back_id" class="back">&lt Back</a>
-			<div id ="rules_text_id" class ="rules_text" >
-				<h2>Spielvorbereitung:</h2>
-				<p>
-					Die Spielsteine werden mit den Zahlen nach unten auf den Tisch gelegt und gemischt.
-					Jeder Spieler nimmt einen Spielstein. Der Spieler mit der höchsten Zahl beginnt das Spiel.
-					Die anderen Spieler folgen im Uhrzeigersinn. Die Spielsteine werden zurückgelegt und
-					erneut gemischt. Jeder Spieler nimmt sich nun insgesamt 14 Spielsteine und sortiert sie als
-					“Gruppen” oder “Reihen” auf seinem Aufstellbrett. Die restlichen Spielsteine bleiben
-					verdeckt auf dem Tisch. Sie bilden den Pool.
-				</p>
-				<br/><br/>
-				<p>
-					Sollte ein Spieler bei den ersten 14 Spielsteinen aus dem Pool drei Paare gleicher Zahl
-					und Farbe haben (z.B. 2 mal „blaue Drei“, 2 mal „rote Acht“ und 2 mal „orange Zehn"
-					so kann er verlangen, dass alle Spielsteine neu gemischt werden. Zum Beweis liegt er die
-					Spielstein-Paare offen auf den Tisch.
-				</p>
-				<br/><br/>
-				<h2>Serien:</h2>
-				<p>
-					
-					Eine <strong>„Gruppe“</strong> besteht aus drei oder vier Spielsteinen von gleichem Wert,
-					aber <strong>unterschiedlicher Farbe</strong>.<br/>
-					Beispiel: 7 in schwarz, 7 in rot, 7 in blau und 7 in orange.
-				</p>
-				<br/><br/>
-				<p>
-					Eine <strong>„Reihe“</strong> besteht aus mindestens drei und höchstens 13 Spielsteinen mit 
-					aufeinander folgenden Zahlenwerten in <strong>gleicher Farbe</strong>.<br/>
-					Beispiel: 3, 4, 5 und 6 in blau.
-				</p>
-				<br/><br/>
-				<p>
-					<strong>Achtung:</strong> Der Spielstein mit dem Zahlenwert 1 ist immer der niedrigste Zahlenwert und 
-					darf nicht an die 13 angelegt werden.
-				</p>
-				<br/><br/>
-				<h2>Spielbeginn:</h2>
-				<p>
-					Jeder Spieler muss beim ersten Auslegen mindestens 30 Punkte (die addierten Zahlenwerte
-					der Spielsteine) mit einer oder mehreren eigenen Serien von seinem Brett auf den Tisch
-					legen. In diesem Spielzug darf der Spieler auf dem Tisch liegende Serien weder manipulie-
-					ren, noch an sie anlegen, noch einen Joker ersetzen.<br/>
-					Wer an der Reihe ist und nicht auslegen kann oder noch nicht auslegen möchte, muss
-					einen Spielstein aus dem Pool nehmen. Damit ist der nächste Spieler an der Reihe.
-					Für jeden Spieler gilt ein Zeitlimit von 1 Minute pro Spielzug. Falls ein Spieler nach Ablauf einer 
-					Minute seinen Spielzug nicht abgeschlossen hat, müssen alle Spielsteine in ihre ursprüngliche Position
-					 gebracht und als Strafe drei Spielsteine aus dem Pool aufgenommen werden.<br/>
-					Können Spielsteine nicht mehr in ihre ursprüngliche Position zurückgebracht werden,
-					so werden sie unter die im Pool liegenden Spielsteine gemischt und der Spieler nimmt 3
-					Strafsteinen plus die entsprechende Zahl von Strafsteinen, die nicht mehr in die ursprüng-
-					gebracht wurden auf.
-				</p>
-				<br/><br/>
-				<h2>Manipulieren:</h2>
-				<p>
-					Durch das Manipulieren von bestehenden Serien wird “Rummikub” erst richtig spannend.
-					Die Spieler versuchen, durch Umbauen von oder Anlegen an Serien, die bereits auf dem
-					Tisch liegen, so viele Spielsteine wie möglich auf dem ven abzulegen. Serien können auf vieifätige Art 
-					manipuliert werden (siehe die folgenden Beispiele), wobei am Ende jedes Spielzugs nur vollständige 
-					Serien auf dem Tisch liegen und keine einzelnen Spielsteine übrig bleiben dürfen. Es dürfen keine 
-					Spielsteine zurück auf das Brett genommen werden.
-				</p>
-				<br/><br/>
-				<h2>Der Joker:</h2>
-				<p>
-					Vor und während der ersten Auslage kann ein Joker nicht eingetauscht werden. Der Joker kann jeden 
-					Spielstein ersetzen. Sobald er eingesetzt wird, übernimmt er automatisch den Wert des ersetzten
-					Spielsteins.<br/>
-					Eine Gruppe oder Reihe, die einen Joker enthält darf manipuliert oder durch Anlegen ergänzt werden. 
-					Ein Joker kann auch durch das Manipulieren einer Gruppe oder Reihe entfernt und neu benutzt werden. 
-					Der Joker darf durch einen entsprechenden Spielstein vom Brett oder aus einer Gruppe oder Reihe vom 
-					Tisch ersetzt werden, wenn die Manipulation zulässig war. Falls ein Joker einer aus drei Spielsteinen 
-					bestehenden Gruppe entnommen wird, kann er durch eine beliebige der beiden fehlenden Farben ersetzt
-					 werden (z.B. in der Gruppe: "blaue 3, rote 3, Joker“ kann der Joker durch die gelbe oder schwarze 3 
-					 ersetzt werden). Wird ein Joker ersetzt, muss er im gleichen Spielzug auch wieder eingesetzt werden 
-					 und darf nicht zurück auf das Brett des Spielers genommen werden.<br/>
-					Jeder Joker, der sich am Ende des Spiels auf dem Brett eines Spielers befindet, zählt 30 Minuspunkte.
-				</p>
-				<br/><br/>
-				<h2>Spielende:</h2>
-				<p>
-					Das Spiel ist zu Ende, wenn ein Spieler alle Spielsteine auf dem Tisch abgelegt und
-					<strong>"Rummikub"</strong> gerufen hat. Die anderen Spieler zählen dann die Zahlerwerte ihrer 
-					Spielsteine zusammen (siehe Punkte zählen).
-				</p>
-				<br/><br/><br/><br/><br/><br/>
-
-			</div>
-		</div>
-
-		<div class="new_play" id="new_playId" style="display: none">
-			<a href = "" id="back_id" class="back">&lt Back</a>
-			<div class="players_names" style="display: block">
-				<div class="header">
-					<h1>Players</h1>
-				</div>
-				<button onclick="make_more_players()" id="number_of_playersId" class="number_of_players">2</button><br>
-
-				<div id="first_playerId">
-					<label><strong>Player 1:</strong></label> <input placeholder="First Player" type="text"><br>
-				</div>
-				
-				<div id="second_playerId">
-					<label><strong>Player 2:</strong></label> <input placeholder="Second Player" type="text"><br>
-				</div>
-			
-				<div id="third_playerId" style="display:none">
-					<label><strong>Player 3:</strong></label> <input placeholder="Third Player" type="text"><br>
-				</div>
-
-				<div id="fourth_playerId" style="display:none">
-					<label><strong>Player 4:</strong></label> <input placeholder="Fourth Player" type="text"><br><br><br><br>
-				</div>
-			</div>
-		</div>
-
-	</main>
+	</footer>
 </body>
 </html>

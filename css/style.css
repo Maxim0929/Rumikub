@@ -1,0 +1,17 @@
+header{
+	width: 100%;
+    text-align: center;
+
+}
+#button{
+	font-size: 40px;
+	background-color: blue;
+	
+}
+#ball{
+	width: 30px;
+	height: 30px;
+}
+span{
+	color: white;
+}
